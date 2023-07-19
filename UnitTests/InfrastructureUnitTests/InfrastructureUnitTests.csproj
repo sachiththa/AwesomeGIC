@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AwesomeGIC.Infrastructure\AwesomeGIC.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\AwesomeGIC.Application\AwesomeGIC.Application.csproj" />
+    <ProjectReference Include="..\..\AwesomeGIC.Infrastructure\AwesomeGIC.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

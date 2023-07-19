@@ -4,8 +4,10 @@ using AwesomeGIC.Infrastructure.DBContext;
 
 namespace InfrastructureUnitTests.Account
 {
+    [Collection("Sequential")]
     public class ReadAccountTests
     {
+     
         [Fact]
         public void ReadAccount_NoAccountFound_ReturnsNull()
         {
@@ -22,7 +24,7 @@ namespace InfrastructureUnitTests.Account
         }
 
         [Fact]
-        public void ReadAccount_Succeess_ReturnsAccountInfo()
+            public void ReadAccount_Succeess_ReturnsAccountInfo()
         {
             // Arrange
             var readAccount = new ReadAccount();

@@ -1,7 +1,9 @@
 ﻿using AwesomeGIC.Infrastructure.Account.Commands;
+using AwesomeGIC.Infrastructure.DBContext;
 
 namespace InfrastructureUnitTests.Account
 {
+    [Collection("Sequential")]
     public class CreateAccountTests
     {
         [Fact]
@@ -17,6 +19,9 @@ namespace InfrastructureUnitTests.Account
             // Assert 
             Assert.Equal("01", result.Id);
             Assert.Equal(123, result.Balance);
+
+            // revert
+            //Database.Accounts = new List<AwesomeGIC.Domain.Entities.Account>();
         }
     }
 }
